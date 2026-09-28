@@ -1,0 +1,475 @@
+{
+  "java_developer": {
+    "name": "Java Developer",
+    "skills": [
+      {
+        "id": "java",
+        "name": "Java",
+        "importance": 5
+      },
+      {
+        "id": "oops",
+        "name": "OOP Concepts",
+        "importance": 5
+      },
+      {
+        "id": "sql",
+        "name": "SQL",
+        "importance": 4
+      },
+      {
+        "id": "html_css",
+        "name": "HTML & CSS",
+        "importance": 3
+      },
+      {
+        "id": "javascript",
+        "name": "JavaScript",
+        "importance": 3
+      },
+      {
+        "id": "spring",
+        "name": "Spring Boot",
+        "importance": 4
+      }
+    ],
+    "roadmap": [
+      "java",
+      "oops",
+      "sql",
+      "html_css",
+      "javascript",
+      "spring"
+    ],
+    "project": "Build a Student Management System using Java and Spring Boot.",
+    "assessment": [
+      {
+        "skill": "java",
+        "question": "Which keyword is used to create a class in Java?",
+        "options": [
+          "class",
+          "object",
+          "new",
+          "void"
+        ],
+        "answer": "class"
+      },
+      {
+        "skill": "oops",
+        "question": "Which OOP concept allows one class to acquire properties of another class?",
+        "options": [
+          "Encapsulation",
+          "Inheritance",
+          "Polymorphism",
+          "Abstraction"
+        ],
+        "answer": "Inheritance"
+      },
+      {
+        "skill": "sql",
+        "question": "Which SQL command is used to retrieve data?",
+        "options": [
+          "GET",
+          "SELECT",
+          "FETCH",
+          "READ"
+        ],
+        "answer": "SELECT"
+      }
+    ]
+  },
+
+  "web_developer": {
+    "name": "Web Developer",
+    "skills": [
+      {
+        "id": "html",
+        "name": "HTML",
+        "importance": 5
+      },
+      {
+        "id": "css",
+        "name": "CSS",
+        "importance": 5
+      },
+      {
+        "id": "javascript",
+        "name": "JavaScript",
+        "importance": 5
+      },
+      {
+        "id": "bootstrap",
+        "name": "Bootstrap",
+        "importance": 3
+      },
+      {
+        "id": "git",
+        "name": "Git & GitHub",
+        "importance": 3
+      }
+    ],
+    "roadmap": [
+      "html",
+      "css",
+      "javascript",
+      "bootstrap",
+      "git"
+    ],
+    "project": "Build a responsive personal portfolio website.",
+    "assessment": [
+      {
+        "skill": "html",
+        "question": "Which HTML tag is used to create a hyperlink?",
+        "options": [
+          "<link>",
+          "<a>",
+          "<href>",
+          "<url>"
+        ],
+        "answer": "<a>"
+      },
+      {
+        "skill": "css",
+        "question": "Which CSS property changes text color?",
+        "options": [
+          "font",
+          "text-color",
+          "color",
+          "foreground"
+        ],
+        "answer": "color"
+      },
+      {
+        "skill": "javascript",
+        "question": "Which keyword declares a variable in JavaScript?",
+        "options": [
+          "var",
+          "variable",
+          "define",
+          "declare"
+        ],
+        "answer": "var"
+      }
+    ]
+  },
+
+  "data_analyst": {
+    "name": "Data Analyst",
+    "skills": [
+      {
+        "id": "python",
+        "name": "Python",
+        "importance": 5
+      },
+      {
+        "id": "sql",
+        "name": "SQL",
+        "importance": 5
+      },
+      {
+        "id": "excel",
+        "name": "Excel",
+        "importance": 4
+      },
+      {
+        "id": "statistics",
+        "name": "Statistics",
+        "importance": 4
+      },
+      {
+        "id": "powerbi",
+        "name": "Power BI",
+        "importance": 4
+      },
+      {
+        "id": "pandas",
+        "name": "Pandas",
+        "importance": 4
+      }
+    ],
+    "roadmap": [
+      "excel",
+      "sql",
+      "statistics",
+      "python",
+      "pandas",
+      "powerbi"
+    ],
+    "project": "Build a Sales Data Dashboard using Python, SQL and Power BI.",
+    "assessment": [
+      {
+        "skill": "python",
+        "question": "Which Python library is commonly used for data analysis?",
+        "options": [
+          "Pandas",
+          "Flask",
+          "Django",
+          "Tkinter"
+        ],
+        "answer": "Pandas"
+      },
+      {
+        "skill": "sql",
+        "question": "Which SQL keyword is used to filter records?",
+        "options": [
+          "ORDER",
+          "WHERE",
+          "GROUP",
+          "FILTER"
+        ],
+        "answer": "WHERE"
+      },
+      {
+        "skill": "statistics",
+        "question": "What is the average of 10, 20 and 30?",
+        "options": [
+          "10",
+          "15",
+          "20",
+          "30"
+        ],
+        "answer": "20"
+      }
+    ]
+  },
+
+  "python_developer": {
+    "name": "Python Developer",
+    "skills": [
+      {
+        "id": "python",
+        "name": "Python",
+        "importance": 5
+      },
+      {
+        "id": "oops",
+        "name": "OOP Concepts",
+        "importance": 4
+      },
+      {
+        "id": "sql",
+        "name": "SQL",
+        "importance": 4
+      },
+      {
+        "id": "git",
+        "name": "Git & GitHub",
+        "importance": 3
+      },
+      {
+        "id": "flask",
+        "name": "Flask",
+        "importance": 4
+      },
+      {
+        "id": "api",
+        "name": "REST APIs",
+        "importance": 4
+      }
+    ],
+    "roadmap": [
+      "python",
+      "oops",
+      "sql",
+      "git",
+      "flask",
+      "api"
+    ],
+    "project": "Build a Student Management REST API using Python and Flask.",
+    "assessment": [
+      {
+        "skill": "python",
+        "question": "Which symbol is used to create a comment in Python?",
+        "options": [
+          "//",
+          "#",
+          "/*",
+          "--"
+        ],
+        "answer": "#"
+      },
+      {
+        "skill": "oops",
+        "question": "Which OOP concept hides internal implementation details?",
+        "options": [
+          "Inheritance",
+          "Encapsulation",
+          "Looping",
+          "Iteration"
+        ],
+        "answer": "Encapsulation"
+      },
+      {
+        "skill": "sql",
+        "question": "Which SQL command is used to add new records?",
+        "options": [
+          "ADD",
+          "INSERT",
+          "CREATE",
+          "UPDATE"
+        ],
+        "answer": "INSERT"
+      }
+    ]
+  },
+
+  "frontend_developer": {
+    "name": "Frontend Developer",
+    "skills": [
+      {
+        "id": "html",
+        "name": "HTML",
+        "importance": 5
+      },
+      {
+        "id": "css",
+        "name": "CSS",
+        "importance": 5
+      },
+      {
+        "id": "javascript",
+        "name": "JavaScript",
+        "importance": 5
+      },
+      {
+        "id": "responsive_design",
+        "name": "Responsive Design",
+        "importance": 4
+      },
+      {
+        "id": "git",
+        "name": "Git & GitHub",
+        "importance": 3
+      },
+      {
+        "id": "react",
+        "name": "React",
+        "importance": 4
+      }
+    ],
+    "roadmap": [
+      "html",
+      "css",
+      "javascript",
+      "responsive_design",
+      "git",
+      "react"
+    ],
+    "project": "Build a responsive task management web application using HTML, CSS and JavaScript.",
+    "assessment": [
+      {
+        "skill": "html",
+        "question": "Which tag is used for the main heading in HTML?",
+        "options": [
+          "<h1>",
+          "<head>",
+          "<heading>",
+          "<title>"
+        ],
+        "answer": "<h1>"
+      },
+      {
+        "skill": "css",
+        "question": "Which CSS property is used to change the background color?",
+        "options": [
+          "background-color",
+          "color",
+          "bg-color",
+          "background"
+        ],
+        "answer": "background-color"
+      },
+      {
+        "skill": "javascript",
+        "question": "Which method is used to select an element by its ID?",
+        "options": [
+          "getElementById()",
+          "getElement()",
+          "selectId()",
+          "findId()"
+        ],
+        "answer": "getElementById()"
+      }
+    ]
+  },
+
+  "backend_developer": {
+    "name": "Backend Developer",
+    "skills": [
+      {
+        "id": "programming",
+        "name": "Programming Fundamentals",
+        "importance": 5
+      },
+      {
+        "id": "sql",
+        "name": "SQL",
+        "importance": 5
+      },
+      {
+        "id": "api",
+        "name": "REST APIs",
+        "importance": 5
+      },
+      {
+        "id": "git",
+        "name": "Git & GitHub",
+        "importance": 3
+      },
+      {
+        "id": "database",
+        "name": "Database Management",
+        "importance": 4
+      },
+      {
+        "id": "authentication",
+        "name": "Authentication",
+        "importance": 4
+      }
+    ],
+    "roadmap": [
+      "programming",
+      "sql",
+      "database",
+      "api",
+      "authentication",
+      "git"
+    ],
+    "project": "Build a secure Student Management REST API with database and user authentication.",
+    "assessment": [
+      {
+        "skill": "programming",
+        "question": "Which data structure follows the First In First Out principle?",
+        "options": [
+          "Stack",
+          "Queue",
+          "Tree",
+          "Graph"
+        ],
+        "answer": "Queue"
+      },
+      {
+        "skill": "sql",
+        "question": "Which SQL command is used to modify existing records?",
+        "options": [
+          "CHANGE",
+          "MODIFY",
+          "UPDATE",
+          "ALTER"
+        ],
+        "answer": "UPDATE"
+      },
+      {
+        "skill": "api",
+        "question": "What does API stand for?",
+        "options": [
+          "Application Programming Interface",
+          "Application Program Internet",
+          "Advanced Programming Interface",
+          "Application Process Integration"
+        ],
+        "answer": "Application Programming Interface"
+      }
+    ]
+  }
+}

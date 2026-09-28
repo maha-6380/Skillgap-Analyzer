@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assessment — CareerGap AI</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><span class="mark"></span><span>CareerGap AI</span></div>
+  <div class="tagline">{{ role.name }} — skill verification</div>
+  <h1>Prove what you know.</h1>
+  <p class="lede">Five quick questions. Skills you answer correctly get marked as verified on your readiness dashboard.</p>
+
+  <form action="/assessment/{{ role_id }}/submit" method="POST">
+    {% for q in role.assessment %}
+    {% set q_index = loop.index0 %}
+    <div class="q-block">
+      <div class="q-text">{{ loop.index }}. {{ q.question }}</div>
+      {% for opt in q.options %}
+      <label class="q-option">
+        <input type="radio" name="q{{ q_index }}" value="{{ opt }}" required>
+        {{ opt }}
+      </label>
+      {% endfor %}
+    </div>
+    {% endfor %}
+    <button class="btn" type="submit">Submit assessment</button>
+  </form>
+</div>
+</body>
+</html>

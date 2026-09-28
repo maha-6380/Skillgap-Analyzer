@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Skill Gap Result - CareerGap AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="wrap">
+
+    <!-- BRAND -->
+    <div class="brand">
+        <span class="mark"></span>
+        <span>CareerGap AI</span>
+    </div>
+
+    <div class="tagline">
+        Know your skills. Find your gaps. Build your career.
+    </div>
+
+
+    <!-- PAGE TITLE -->
+    <h1>Your Skill Gap Result</h1>
+
+    <p class="lede">
+        Target role:
+        <strong>{{ role.name }}</strong>
+    </p>
+
+
+    <!-- READINESS SCORE -->
+    <div class="score-card">
+
+        <div class="score-top">
+
+            <div class="score-num">
+                {{ result.readiness }}%
+            </div>
+
+            <div class="score-label">
+                placement readiness
+            </div>
+
+        </div>
+
+        <div class="score-bar">
+            <div class="score-bar-fill"
+                 style="width: {{ result.readiness }}%;">
+            </div>
+        </div>
+
+        <p class="feedback-line">
+            Your readiness score is based on your current
+            skill levels and the importance of each skill.
+        </p>
+
+    </div>
+
+
+    <!-- CRITICAL GAPS -->
+    {% if result.critical_gaps %}
+
+    <div class="gap-group critical">
+
+        <h3>Critical Skills to Learn</h3>
+
+        <div class="pill-list">
+
+            {% for skill in result.critical_gaps %}
+
+            <span class="pill">
+                {{ skill.name }}
+            </span>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+
+    <!-- IMPORTANT GAPS -->
+    {% if result.important_gaps %}
+
+    <div class="gap-group important">
+
+        <h3>Important Skills to Learn</h3>
+
+        <div class="pill-list">
+
+            {% for skill in result.important_gaps %}
+
+            <span class="pill">
+                {{ skill.name }}
+            </span>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+
+    <!-- OTHER MISSING SKILLS -->
+    {% if result.other_gaps %}
+
+    <div class="gap-group basic">
+
+        <h3>Other Skills to Learn</h3>
+
+        <div class="pill-list">
+
+            {% for skill in result.other_gaps %}
+
+            <span class="pill">
+                {{ skill.name }}
+            </span>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+
+    <!-- KNOWN SKILLS -->
+    <h2>Skills You Know</h2>
+
+    {% if result.known %}
+
+    <div class="gap-group verified">
+
+        <h3>Current Skills</h3>
+
+        <div class="pill-list">
+
+            {% for skill in result.known %}
+
+            <span class="pill">
+                {{ skill.name }} — {{ skill.level_label }}
+            </span>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    {% else %}
+
+    <p class="feedback-line">
+        No skills marked yet.
+    </p>
+
+    {% endif %}
+
+
+    <!-- SKILLS TO IMPROVE -->
+    {% if result.improve %}
+
+    <h2>Skills to Improve</h2>
+
+    <div class="gap-group important">
+
+        <h3>Beginner Level</h3>
+
+        <div class="pill-list">
+
+            {% for skill in result.improve %}
+
+            <span class="pill">
+                {{ skill.name }} — {{ skill.level_label }}
+            </span>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+
+    <!-- MISSING SKILLS -->
+    {% if result.missing %}
+
+    <h2>Missing Skills</h2>
+
+    <div class="gap-group critical">
+
+        <h3>Not Known Yet</h3>
+
+        <div class="pill-list">
+
+            {% for skill in result.missing %}
+
+            <span class="pill">
+                {{ skill.name }}
+            </span>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+
+    <!-- LEARNING ROADMAP -->
+    <h2>Your Learning Roadmap</h2>
+
+    {% if result.roadmap %}
+
+    <div class="roadmap">
+
+        {% for skill in result.roadmap %}
+
+        <div class="roadmap-step"
+             data-step="{{ loop.index }}">
+
+            <div class="name">
+                {{ skill.name }}
+            </div>
+
+            <div class="meta">
+
+                Current level:
+                {{ skill.level_label }}
+
+                {% if skill.importance %}
+                · Importance: {{ skill.importance }}/5
+                {% endif %}
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% else %}
+
+    <div class="gap-group verified">
+
+        <h3>Roadmap Complete 🎉</h3>
+
+        <p>
+            You have already mastered all the roadmap skills
+            for this role.
+        </p>
+
+    </div>
+
+    {% endif %}
+
+
+    <!-- NEXT SKILL -->
+    {% if result.next_skill %}
+
+    <h2>Start With</h2>
+
+    <div class="project-card">
+
+        <h3>🎯 Your Next Recommended Skill</h3>
+
+        <p>
+            <strong>{{ result.next_skill.name }}</strong>
+        </p>
+
+        <p>
+            Current level:
+            {{ result.next_skill.level_label }}
+        </p>
+
+    </div>
+
+    {% endif %}
+
+
+    <!-- RECOMMENDED PROJECT -->
+    <h2>Recommended Project</h2>
+
+    <div class="project-card">
+
+        <h3>💡 Build This Project</h3>
+
+        <p>
+            {{ result.project }}
+        </p>
+
+    </div>
+
+
+    <!-- ASSESSMENT -->
+    <h2>Test Your Knowledge</h2>
+
+    <div class="project-card">
+
+        <h3>📝 Skill Assessment</h3>
+
+        <p>
+            Take a short role-specific assessment to verify
+            your knowledge and update your readiness score.
+        </p>
+
+        <div class="actions">
+
+            <a class="btn"
+               href="{{ url_for('assessment', role_id=role_id) }}">
+                Take Skill Assessment
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ACTION BUTTONS -->
+    <div class="actions">
+
+        <a class="btn secondary"
+           href="{{ url_for('home') }}">
+            ← Analyze Another Role
+        </a>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="note">
+
+        Prototype tool — readiness scores are an estimate
+        to guide learning, not a placement guarantee.
+
+    </footer>
+
+</div>
+
+</body>
+</html>

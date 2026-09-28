@@ -1,0 +1,839 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* =========================
+   COLOR VARIABLES
+========================= */
+
+:root {
+  --ink: #1C2333;
+  --ink-soft: #4B5468;
+
+  --paper: #F5F6FA;
+  --panel: #FFFFFF;
+
+  --line: #E1E4EC;
+
+  --indigo: #35418C;
+  --indigo-dark: #29336F;
+  --indigo-soft: #EEF0FA;
+
+  --amber: #B5650A;
+  --amber-soft: #FBF0DF;
+
+  --green: #2F7D4F;
+  --green-soft: #E9F5EC;
+
+  --red: #B54747;
+  --red-soft: #FCECEC;
+
+  --radius: 12px;
+}
+
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: linear-gradient(
+    135deg,
+    #FAFAF8 0%,
+    #F3F4FA 100%
+  );
+
+  color: var(--ink);
+
+  font-family: 'Inter', system-ui, sans-serif;
+
+  line-height: 1.6;
+
+  min-height: 100vh;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.wrap {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 50px 28px 90px;
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1,
+h2,
+h3 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+
+  margin: 0 0 8px;
+}
+
+h1 {
+  font-size: 32px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  max-width: 24ch;
+
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 21px;
+
+  font-weight: 600;
+
+  margin-top: 38px;
+
+  margin-bottom: 14px;
+}
+
+h3 {
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 5px;
+}
+
+.brand .mark {
+  width: 11px;
+
+  height: 11px;
+
+  background: var(--indigo);
+
+  border-radius: 3px;
+
+  display: inline-block;
+
+  box-shadow: 0 3px 8px rgba(53, 65, 140, 0.25);
+}
+
+.brand span {
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-weight: 600;
+
+  font-size: 16px;
+
+  letter-spacing: 0.01em;
+}
+
+
+/* =========================
+   TAGLINE
+========================= */
+
+.tagline {
+  color: var(--ink-soft);
+
+  font-size: 14px;
+
+  margin-bottom: 42px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.lede {
+  color: var(--ink-soft);
+
+  font-size: 16px;
+
+  max-width: 650px;
+
+  margin-bottom: 32px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.field {
+  margin-bottom: 24px;
+}
+
+.field label {
+  display: block;
+
+  font-weight: 600;
+
+  font-size: 14px;
+
+  margin-bottom: 8px;
+}
+
+.field select {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 9px;
+
+  font-size: 15px;
+
+  font-family: inherit;
+
+  background: var(--panel);
+
+  color: var(--ink);
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.field select:focus {
+  outline: none;
+
+  border-color: var(--indigo);
+
+  box-shadow: 0 0 0 3px rgba(53, 65, 140, 0.12);
+}
+
+
+/* =========================
+   SKILLS PANEL
+========================= */
+
+#skills-panel {
+  margin-top: 30px;
+
+  display: none;
+
+  background: var(--panel);
+
+  border: 1px solid var(--line);
+
+  border-radius: var(--radius);
+
+  padding: 24px;
+}
+
+#skills-panel.visible {
+  display: block;
+
+  animation: fadeIn 0.3s ease;
+}
+
+
+/* =========================
+   SKILL ROW
+========================= */
+
+.skill-row {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 16px 0;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.skill-row:last-child {
+  border-bottom: none;
+}
+
+.skill-name {
+  font-weight: 600;
+
+  font-size: 15px;
+}
+
+.skill-weight {
+  color: var(--ink-soft);
+
+  font-size: 12.5px;
+
+  margin-top: 3px;
+}
+
+.skill-row select {
+  padding: 9px 11px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 8px;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  min-width: 155px;
+
+  background: var(--panel);
+
+  color: var(--ink);
+
+  cursor: pointer;
+}
+
+.skill-row select:focus {
+  outline: none;
+
+  border-color: var(--indigo);
+
+  box-shadow: 0 0 0 3px rgba(53, 65, 140, 0.1);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+  display: inline-block;
+
+  background: var(--indigo);
+
+  color: #FFFFFF;
+
+  border: none;
+
+  padding: 13px 22px;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  margin-top: 10px;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--indigo-dark);
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 5px 14px rgba(53, 65, 140, 0.2);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn.secondary {
+  background: transparent;
+
+  color: var(--indigo);
+
+  border: 1px solid var(--indigo);
+
+  box-shadow: none;
+}
+
+.btn.secondary:hover {
+  background: var(--indigo-soft);
+
+  box-shadow: none;
+}
+
+
+/* =========================
+   SCORE CARD
+========================= */
+
+.score-card {
+  background: var(--panel);
+
+  border: 1px solid var(--line);
+
+  border-radius: var(--radius);
+
+  padding: 28px;
+
+  margin-bottom: 28px;
+
+  box-shadow: 0 8px 24px rgba(28, 35, 51, 0.05);
+}
+
+.score-top {
+  display: flex;
+
+  align-items: flex-end;
+
+  gap: 14px;
+}
+
+.score-num {
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: 56px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  color: var(--indigo);
+}
+
+.score-label {
+  color: var(--ink-soft);
+
+  font-size: 14px;
+
+  padding-bottom: 8px;
+}
+
+.score-bar {
+  height: 10px;
+
+  background: #E8EAF0;
+
+  border-radius: 999px;
+
+  margin-top: 18px;
+
+  overflow: hidden;
+}
+
+.score-bar-fill {
+  height: 100%;
+
+  background: var(--indigo);
+
+  border-radius: 999px;
+
+  transition: width 0.6s ease;
+}
+
+
+/* =========================
+   GAP GROUPS
+========================= */
+
+.gap-groups {
+  display: grid;
+
+  gap: 14px;
+
+  margin-bottom: 10px;
+}
+
+.gap-group {
+  border-radius: var(--radius);
+
+  padding: 18px 20px;
+
+  border: 1px solid var(--line);
+
+  margin-bottom: 14px;
+}
+
+.gap-group h3 {
+  font-size: 14px;
+
+  margin-bottom: 10px;
+}
+
+.gap-group.critical {
+  background: var(--amber-soft);
+
+  border-color: #EBD3AC;
+}
+
+.gap-group.important {
+  background: #F4F1FA;
+
+  border-color: #DAD4EF;
+}
+
+.gap-group.basic {
+  background: var(--paper);
+}
+
+.gap-group.verified {
+  background: var(--green-soft);
+
+  border-color: #C9E4D2;
+}
+
+
+/* =========================
+   SKILL PILLS
+========================= */
+
+.pill-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.pill {
+  background: var(--panel);
+
+  border: 1px solid var(--line);
+
+  border-radius: 999px;
+
+  padding: 6px 13px;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.pill:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 3px 8px rgba(28, 35, 51, 0.08);
+}
+
+
+/* =========================
+   ROADMAP
+========================= */
+
+.roadmap {
+  margin: 22px 0 34px;
+
+  position: relative;
+
+  padding-left: 32px;
+}
+
+.roadmap::before {
+  content: "";
+
+  position: absolute;
+
+  left: 9px;
+
+  top: 7px;
+
+  bottom: 7px;
+
+  width: 2px;
+
+  background: var(--line);
+}
+
+.roadmap-step {
+  position: relative;
+
+  padding-bottom: 24px;
+}
+
+.roadmap-step:last-child {
+  padding-bottom: 0;
+}
+
+.roadmap-step::before {
+  content: attr(data-step);
+
+  position: absolute;
+
+  left: -32px;
+
+  top: 0;
+
+  width: 22px;
+
+  height: 22px;
+
+  border-radius: 50%;
+
+  background: var(--indigo);
+
+  color: #FFFFFF;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-shadow: 0 3px 8px rgba(53, 65, 140, 0.2);
+}
+
+.roadmap-step .name {
+  font-weight: 600;
+
+  font-size: 15px;
+}
+
+.roadmap-step .meta {
+  color: var(--ink-soft);
+
+  font-size: 13px;
+
+  margin-top: 2px;
+}
+
+
+/* =========================
+   PROJECT CARD
+========================= */
+
+.project-card {
+  background: var(--indigo-soft);
+
+  border: 1px solid #DDE1F5;
+
+  border-radius: var(--radius);
+
+  padding: 22px 24px;
+
+  margin-bottom: 30px;
+}
+
+.project-card h3 {
+  font-size: 15px;
+
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  margin: 0;
+
+  font-size: 15px;
+
+  color: var(--ink);
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.actions {
+  display: flex;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+
+  margin-top: 10px;
+}
+
+
+/* =========================
+   ASSESSMENT
+========================= */
+
+.q-block {
+  border: 1px solid var(--line);
+
+  border-radius: var(--radius);
+
+  padding: 20px 22px;
+
+  margin-bottom: 17px;
+
+  background: var(--panel);
+
+  box-shadow: 0 5px 18px rgba(28, 35, 51, 0.04);
+}
+
+.q-block .q-text {
+  font-weight: 600;
+
+  margin-bottom: 13px;
+}
+
+.q-option {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 7px 0;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+.q-option input {
+  accent-color: var(--indigo);
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   FEEDBACK
+========================= */
+
+.feedback-line {
+  font-size: 14px;
+
+  color: var(--ink-soft);
+
+  margin-bottom: 5px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer.note {
+  color: var(--ink-soft);
+
+  font-size: 12.5px;
+
+  margin-top: 52px;
+
+  text-align: center;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 650px) {
+
+  .wrap {
+    padding: 32px 18px 60px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  h2 {
+    font-size: 19px;
+  }
+
+  .tagline {
+    margin-bottom: 30px;
+  }
+
+  #skills-panel {
+    padding: 18px;
+  }
+
+  .skill-row {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .skill-row select {
+    width: 100%;
+
+    min-width: 0;
+  }
+
+  .score-card {
+    padding: 22px;
+  }
+
+  .score-top {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 6px;
+  }
+
+  .score-num {
+    font-size: 48px;
+  }
+
+  .btn {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .project-card {
+    padding: 19px;
+  }
+}
